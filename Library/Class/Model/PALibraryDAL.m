@@ -7,6 +7,7 @@
 //
 
 #import "PALibraryDAL.h"
+#import "PALibraryDAO.h"
 #import "PANetworkService.h"
 
 @interface PALibraryDAL ()
@@ -18,6 +19,10 @@
 
 - (void)Log:(NSString *)isbn
 {
+    PALibraryDAO *myDAO = [[PALibraryDAO alloc] init];
+    [myDAO checkDatabase];
+    [myDAO release];
+    
     [self.networkService netGetInfoISBN:isbn];
 }
 

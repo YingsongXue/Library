@@ -15,6 +15,15 @@ typedef NS_ENUM(NSInteger, PALibraryTable)
     PALibraryTableBooks,
 };
 
+typedef NS_ENUM(NSInteger, PABookStatus)
+{
+    PABookStatusDefault = 0,
+    PABookStatusChecking = 1,
+    PABookStatusFinished = 2,
+};
+
+
+
 @interface PALibraryDAO : NSObject
 
 //检查数据库，创建或升级
