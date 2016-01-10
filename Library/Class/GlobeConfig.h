@@ -8,7 +8,7 @@
 
 #ifndef Library_GlobeConfig_h
 #define Library_GlobeConfig_h
-
+ 
 //http://api.douban.com/v2/book/isbn/9787115224637 //Douban page.
 /*
  {
