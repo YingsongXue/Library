@@ -1,2 +1,6 @@
 
 *.xcuserstate
+
+Library/Library.xcodeproj/xcuserdata
+
+Library/Library.xcodeproj/project.xcworkspace
