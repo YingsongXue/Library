@@ -25,34 +25,20 @@
 
 @implementation PABarCodeViewController
 
-- (void)dealloc
-{
-    _videoPreviewView = nil;
-    [_captureSession release];
-    [_videoPreviewLayer release];
-    [_audioPlayer release];
-    
-    [super dealloc];
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(back:)]autorelease];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(back:)];
     
     UIBarButtonItem *flashBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(switchFlash:)];
     self.navigationItem.rightBarButtonItem = flashBarButton;
-    [flashBarButton release];
     
     UIView *videoView = [[UIView alloc] initWithFrame:CGRectZero];
     [self.view addSubview:videoView];
     videoView.backgroundColor = [UIColor blackColor];
     videoView.translatesAutoresizingMaskIntoConstraints = NO;
     self.videoPreviewView = videoView;
-    [videoView release];
-    
-    
     
     NSDictionary *viewDict = NSDictionaryOfVariableBindings(videoView);
     NSDictionary *metrics = @{@"Padding":@0};
@@ -105,11 +91,9 @@
     AVCaptureSession *captureSession = [[AVCaptureSession alloc] init];
     [captureSession addInput:input];
     self.captureSession = captureSession;
-    [captureSession release];
     
     AVCaptureMetadataOutput *captureMetadataOutput = [[AVCaptureMetadataOutput alloc] init];
     [captureSession addOutput:captureMetadataOutput];
-    [captureMetadataOutput release];
     
     dispatch_queue_t dispatchQueue;
     dispatchQueue = dispatch_queue_create("barcodeQuene", NULL);
@@ -124,7 +108,6 @@
     self.videoPreviewView.layer.masksToBounds = YES;
     [self.videoPreviewView.layer addSublayer:previewLayer];
     self.videoPreviewLayer = previewLayer;
-    [previewLayer release];
     
     [self.captureSession startRunning];
     self.isReading = YES;
@@ -149,7 +132,7 @@
     
     AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:beepURL error:&error];
     self.audioPlayer = audioPlayer;
-    [audioPlayer release];
+    
     if (error) {
         NSLog(@"Could not play beep file.");
         NSLog(@"%@", [error localizedDescription]);
@@ -194,7 +177,6 @@
 {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:info delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
-    [alert release];
 }
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex

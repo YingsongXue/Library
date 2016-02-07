@@ -25,7 +25,7 @@ typedef NS_ENUM(NSInteger, PALibraryRequestType)
 @end
 
 @interface PANetworkService : NSObject
-@property (nonatomic, assign) id<PALibraryDelegate> delegate;
+@property (nonatomic, weak) id<PALibraryDelegate> delegate;
 
 - (void)netGetInfoISBN:(NSString *)isbn;
 

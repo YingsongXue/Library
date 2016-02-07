@@ -17,22 +17,12 @@
 
 @implementation AppDelegate
 
-- (void)dealloc
-{
-    [_window release];
-    [_naviController release];
-    
-    [super dealloc];
-}
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     PAHomeViewController *homeViewController = [[PAHomeViewController alloc] init];
-    self.naviController = [[[UINavigationController alloc] initWithRootViewController:homeViewController] autorelease];
-    [homeViewController release];
+    self.naviController = [[UINavigationController alloc] initWithRootViewController:homeViewController];
     self.window.rootViewController = self.naviController;
     self.window.backgroundColor = [UIColor whiteColor];
     

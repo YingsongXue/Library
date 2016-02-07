@@ -23,9 +23,6 @@ NSString *dbPath = @"library.db";
 - (void)dealloc
 {
     [_myDB close];
-    [_myDB release];
-    
-    [super dealloc];
 }
 
 - (NSString *)dbPath
@@ -69,7 +66,7 @@ NSString *dbPath = @"library.db";
     BOOL complete = NO;
     [self.myDB beginTransaction];
     
-    NSMutableString *SQL = [[NSMutableString alloc] init];
+    NSMutableString *SQL = [NSMutableString string];
     
     [SQL setString:@""];
     [SQL appendString:@"CREATE TABLE Books "];
@@ -164,8 +161,6 @@ NSString *dbPath = @"library.db";
     [self.myDB executeUpdate:SQL];
     
     complete = [self.myDB commit];
-    
-    [SQL release];
     
     return complete;
 }

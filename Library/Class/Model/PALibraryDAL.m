@@ -12,7 +12,7 @@
 
 @interface PALibraryDAL ()
     <PALibraryDelegate>
-@property (nonatomic, retain) PANetworkService *networkService;
+@property (nonatomic, strong) PANetworkService *networkService;
 @end
 
 @implementation PALibraryDAL
@@ -21,7 +21,6 @@
 {
     PALibraryDAO *myDAO = [[PALibraryDAO alloc] init];
     [myDAO checkDatabase];
-    [myDAO release];
     
     [self.networkService netGetInfoISBN:isbn];
 }
@@ -44,7 +43,7 @@ static PALibraryDAL *_sharedInstance = nil;
 - (instancetype )init
 {
     if (self = [super init]) {
-        self.networkService = [[[PANetworkService alloc] init] autorelease];
+        self.networkService = [[PANetworkService alloc] init];
         self.networkService.delegate = self;
     }
     return self;
@@ -64,30 +63,10 @@ static PALibraryDAL *_sharedInstance = nil;
 
 + (instancetype)allocWithZone:(NSZone *)zone
 {
-    return [[self sharedIntance] retain];
+    return [self sharedIntance];
 }
 
 - (id)copyWithZone:(NSZone *)zone
-{
-    return self;
-}
-
-- (id)retain
-{
-    return self;
-}
-
-- (NSUInteger)retainCount
-{
-    return NSUIntegerMax;  //denotes an object that cannot be released
-}
-
-- (oneway void)release
-{
-    //do nothing
-}
-
-- (id)autorelease
 {
     return self;
 }

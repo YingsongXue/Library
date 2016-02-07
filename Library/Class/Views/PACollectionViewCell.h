@@ -10,7 +10,7 @@
 
 @interface PACollectionViewCell : UICollectionViewCell
 
-@property (nonatomic, assign, readonly) UIImageView *imageView;
-@property (nonatomic, assign, readonly) UILabel *titleLabel;
+@property (nonatomic, weak, readonly) UIImageView *imageView;
+@property (nonatomic, weak, readonly) UILabel *titleLabel;
 
 @end

@@ -17,13 +17,6 @@
 
 @implementation PAHomeViewController
 
-- (void)dealloc
-{
-    [_collectionView release];
-    
-    [super dealloc];
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -33,15 +26,14 @@
     [self.navigationItem setHidesBackButton:YES animated:NO];
     self.view.backgroundColor = [UIColor whiteColor];
 
-    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(scanBarCode)] autorelease];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(scanBarCode)];
     
     UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc] init];
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
     
     UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:flowLayout] ;
-    [flowLayout release];
     //注册
-    [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"GradientCell"];
+    [collectionView registerClass:[PACollectionViewCell class] forCellWithReuseIdentifier:@"GradientCell"];
     
     //设置代理
     collectionView.delegate = self;
@@ -56,17 +48,13 @@
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-Padding-[collectionView]-Padding-|" options:NSLayoutFormatAlignAllCenterY metrics:metrics views:viewsDic]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-Padding-[collectionView]-Padding-|" options:NSLayoutFormatAlignAllCenterX metrics:metrics views:viewsDic]];
     
-    [collectionView release];
-    
 }
 
 - (void)scanBarCode
 {
     PABarCodeViewController *barCodeViewController = [[PABarCodeViewController alloc] init];
     UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:barCodeViewController];
-    [barCodeViewController release];
     [self presentViewController:navigation animated:YES completion:nil];
-    [navigation release];
 }
 
 #pragma mark CollectionViewDataSource
@@ -85,7 +73,8 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString * CellIdentifier = @"GradientCell";
-    UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    PACollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    cell.titleLabel.text = @"hello world";
     int num1 = arc4random()%255;
     int num2 = arc4random()%255;
     int num3 = arc4random()%255;

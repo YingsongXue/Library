@@ -24,11 +24,7 @@ const NSString *kOperation = @"isbn";
 
 - (void)dealloc
 {
-    _delegate = nil;
     [_queue cancelAllOperations];
-    [_queue release];
-    
-    [super dealloc];
 }
 
 - (instancetype)init
