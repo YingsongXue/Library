@@ -95,7 +95,16 @@
 
 + (PABookKeyType)typeOf:(NSString *)str
 {
-    return PABookKeyTypeISBN13;
+    if (str && [str isKindOfClass:[NSString class]]) {
+        if (str.length == 10) {
+            return PABookKeyTypeISBN10;
+        }
+        else if(str.length == 13)
+        {
+            return PABookKeyTypeISBN13;
+        }
+    }
+    return PABookKeyTypeUnknown;
 }
 
 + (NSArray *)book

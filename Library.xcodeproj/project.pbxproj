@@ -9,20 +9,20 @@
 /* Begin PBXBuildFile section */
 		B504D26A1A062CED00474D6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D2691A062CED00474D6D /* main.m */; };
 		B504D26D1A062CED00474D6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D26C1A062CED00474D6D /* AppDelegate.m */; };
-		B504D29E1A062F4200474D6D /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D2941A062F4200474D6D /* FMDatabase.m */; };
-		B504D2A01A062F4200474D6D /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D2961A062F4200474D6D /* FMDatabaseAdditions.m */; };
-		B504D2A21A062F4200474D6D /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D2981A062F4200474D6D /* FMDatabasePool.m */; };
-		B504D2A41A062F4200474D6D /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D29A1A062F4200474D6D /* FMDatabaseQueue.m */; };
-		B504D2A61A062F4200474D6D /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D29D1A062F4200474D6D /* FMResultSet.m */; };
-		B504D2BF1A062FB700474D6D /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D2AA1A062FB700474D6D /* ASIAuthenticationDialog.m */; };
-		B504D2C11A062FB700474D6D /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D2AD1A062FB700474D6D /* ASIDataCompressor.m */; };
-		B504D2C31A062FB700474D6D /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D2AF1A062FB700474D6D /* ASIDataDecompressor.m */; };
-		B504D2C51A062FB700474D6D /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D2B11A062FB700474D6D /* ASIDownloadCache.m */; };
-		B504D2C71A062FB700474D6D /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D2B31A062FB700474D6D /* ASIFormDataRequest.m */; };
-		B504D2C91A062FB700474D6D /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D2B51A062FB700474D6D /* ASIHTTPRequest.m */; };
-		B504D2CB1A062FB700474D6D /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D2B91A062FB700474D6D /* ASIInputStream.m */; };
-		B504D2CD1A062FB700474D6D /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D2BB1A062FB700474D6D /* ASINetworkQueue.m */; };
-		B504D2CF1A062FB700474D6D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D2BE1A062FB700474D6D /* Reachability.m */; };
+		B504D29E1A062F4200474D6D /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D2941A062F4200474D6D /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B504D2A01A062F4200474D6D /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D2961A062F4200474D6D /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B504D2A21A062F4200474D6D /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D2981A062F4200474D6D /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B504D2A41A062F4200474D6D /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D29A1A062F4200474D6D /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B504D2A61A062F4200474D6D /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D29D1A062F4200474D6D /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B504D2BF1A062FB700474D6D /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D2AA1A062FB700474D6D /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B504D2C11A062FB700474D6D /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D2AD1A062FB700474D6D /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B504D2C31A062FB700474D6D /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D2AF1A062FB700474D6D /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B504D2C51A062FB700474D6D /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D2B11A062FB700474D6D /* ASIDownloadCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B504D2C71A062FB700474D6D /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D2B31A062FB700474D6D /* ASIFormDataRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B504D2C91A062FB700474D6D /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D2B51A062FB700474D6D /* ASIHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B504D2CB1A062FB700474D6D /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D2B91A062FB700474D6D /* ASIInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B504D2CD1A062FB700474D6D /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D2BB1A062FB700474D6D /* ASINetworkQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B504D2CF1A062FB700474D6D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D2BE1A062FB700474D6D /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B504D2D61A06302B00474D6D /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B504D2D11A062FE500474D6D /* libsqlite3.0.dylib */; };
 		B504D2D71A06302F00474D6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B504D2D31A062FEE00474D6D /* UIKit.framework */; };
 		B504D2D91A0630A500474D6D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B504D2D81A0630A500474D6D /* CFNetwork.framework */; };
@@ -30,7 +30,7 @@
 		B504D2DD1A0630BC00474D6D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B504D2DC1A0630BC00474D6D /* MobileCoreServices.framework */; };
 		B504D2DF1A0630C200474D6D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B504D2DE1A0630C200474D6D /* CoreGraphics.framework */; };
 		B504D2E11A0630CB00474D6D /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B504D2E01A0630CB00474D6D /* libz.1.2.5.dylib */; };
-		B504D2E51A06569600474D6D /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D2E41A06569600474D6D /* JSONKit.m */; };
+		B504D2E51A06569600474D6D /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B504D2E41A06569600474D6D /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B528DE311A4C5F170091B0CF /* PANetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = B528DE301A4C5F170091B0CF /* PANetworkService.m */; };
 		B528DE341A4C68810091B0CF /* PALibraryDAL.m in Sources */ = {isa = PBXBuildFile; fileRef = B528DE331A4C68810091B0CF /* PALibraryDAL.m */; };
 		B56968101A09C198008035BE /* UIColor+MLPFlatColors.m in Sources */ = {isa = PBXBuildFile; fileRef = B569680F1A09C198008035BE /* UIColor+MLPFlatColors.m */; };
@@ -41,6 +41,7 @@
 		B578F6EA1BD0A2CA00EC592F /* PALibraryDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = B578F6E91BD0A2CA00EC592F /* PALibraryDAO.m */; };
 		B578F6ED1BD0A5C000EC592F /* PATableManage.m in Sources */ = {isa = PBXBuildFile; fileRef = B578F6EC1BD0A5C000EC592F /* PATableManage.m */; };
 		B578F6F01BD0AA2800EC592F /* PALibraryBook.m in Sources */ = {isa = PBXBuildFile; fileRef = B578F6EF1BD0AA2800EC592F /* PALibraryBook.m */; };
+		B5907F641C97068F0054C195 /* scanner.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5907F631C97068F0054C195 /* scanner.wav */; };
 		B5AB58681A656B1100FA919A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5AB586A1A656B1100FA919A /* InfoPlist.strings */; };
 		B5AB586F1A656E8F00FA919A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5AB58711A656E8F00FA919A /* Localizable.strings */; };
 		B5DAB7471B1AF96100AA5E97 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DAB7271B1AF96100AA5E97 /* MKAnnotationView+WebCache.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -131,6 +132,7 @@
 		B578F6EC1BD0A5C000EC592F /* PATableManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PATableManage.m; sourceTree = "<group>"; };
 		B578F6EE1BD0AA2800EC592F /* PALibraryBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PALibraryBook.h; sourceTree = "<group>"; };
 		B578F6EF1BD0AA2800EC592F /* PALibraryBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PALibraryBook.m; sourceTree = "<group>"; };
+		B5907F631C97068F0054C195 /* scanner.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = scanner.wav; sourceTree = "<group>"; };
 		B5AB586B1A656B1400FA919A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B5AB586C1A656C6900FA919A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B5AB58701A656E8F00FA919A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 		B504D2671A062CED00474D6D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B5907F631C97068F0054C195 /* scanner.wav */,
 				B504D2681A062CED00474D6D /* Info.plist */,
 				B504D2691A062CED00474D6D /* main.m */,
 				B5AB586A1A656B1100FA919A /* InfoPlist.strings */,
@@ -282,11 +285,11 @@
 		B504D2911A062ED700474D6D /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				B569680D1A09C198008035BE /* FlatColors */,
-				B504D2E21A06568B00474D6D /* JSONKit */,
-				B504D2D51A06300900474D6D /* Framework */,
 				B504D2A81A062FB700474D6D /* ASIHTTPRequest */,
+				B569680D1A09C198008035BE /* FlatColors */,
 				B504D2921A062F4200474D6D /* fmdb */,
+				B504D2D51A06300900474D6D /* Framework */,
+				B504D2E21A06568B00474D6D /* JSONKit */,
 				B5DAB7091B1AF62100AA5E97 /* SDImageCache */,
 			);
 			path = Libs;
@@ -482,6 +485,7 @@
 				B5E5495E1BCFD56A00E8694B /* Images.xcassets in Resources */,
 				B5E549601BCFD5A000E8694B /* Home.xcassets in Resources */,
 				B5AB58681A656B1100FA919A /* InfoPlist.strings in Resources */,
+				B5907F641C97068F0054C195 /* scanner.wav in Resources */,
 				B5AB586F1A656E8F00FA919A /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

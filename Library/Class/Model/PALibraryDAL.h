@@ -7,14 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PALibraryDAO.h"
 
-@class PALibraryDAO;
 @interface PALibraryDAL : NSObject
 + (instancetype )sharedIntance;
 
 @property (nonatomic, strong) PALibraryDAO *bookDAO;
-
-- (void)Log:(NSString *)isbn;
 
 - (void)addBook:(NSString *)isbn;
 

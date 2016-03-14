@@ -17,7 +17,7 @@
 
 @implementation PALibraryDAL
 
-- (void)Log:(NSString *)isbn
+- (void)addBook:(NSString *)isbn;
 {
     PALibraryDAO *myDAO = [[PALibraryDAO alloc] init];
     [myDAO checkDatabase];

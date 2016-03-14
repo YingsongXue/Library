@@ -10,10 +10,9 @@
 
 typedef NS_ENUM(NSInteger, PABookKeyType)
 {
-    PABookKeyTypeID,
+    PABookKeyTypeUnknown,
     PABookKeyTypeISBN10,
     PABookKeyTypeISBN13,
-    PABookKeyTypeURL,
 };
 
 @interface PALibraryBook : NSObject

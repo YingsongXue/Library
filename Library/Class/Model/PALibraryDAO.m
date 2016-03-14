@@ -95,6 +95,7 @@ NSString *dbPath = @"library.db";
     
     [SQL appendString:@" , status integer NULL  "];
     [SQL appendString:@" , syncDate datetime NULL  "];
+    [SQL appendString:@" , addDate datetime NULL  "];
     
     [SQL appendString:@" ) "];
     [self.myDB executeUpdate:SQL];
@@ -199,5 +200,59 @@ NSString *dbPath = @"library.db";
     return result;
 }
 
+#pragma mark Add Info
+- (BOOL)insertBooks:(NSString *)isbn keyType:(PABookKeyType)keyType
+{
+    if (!(keyType == PABookKeyTypeISBN10 || keyType == PABookKeyTypeISBN13)) {
+        return NO;
+    }
+    NSMutableString *SQL = [NSMutableString string];
+    
+    [SQL setString:@""];
+    [SQL appendString:@" INSERT INTO Books( "];
+    switch (keyType) {
+        case PABookKeyTypeISBN10:
+            [SQL appendString:@"isbn10"];
+            break;
+        case PABookKeyTypeISBN13:
+            [SQL appendString:@"isbn13"];
+            break;
+        default:
+            break;
+    }
+    [SQL appendString:@" , addDate) "];
+    [SQL appendString:@" VALUES ("];
+    [SQL appendFormat:@" '%@' ", isbn];
+    [SQL appendFormat:@" , datetime( 'today', 'localtime') "];
+    return [self.myDB executeUpdate:SQL];
+}
+
+#pragma mark GetData
+- (NSArray *)getBookList
+{
+    NSMutableArray *result = [NSMutableArray array];
+    NSMutableString *SQL = [NSMutableString string];
+    
+    [SQL setString:@""];
+    [SQL appendString:@" SELECT "];
+    [SQL appendString:@"   bookID "];
+    [SQL appendString:@" , isbn10 "];
+    [SQL appendString:@" , isbn13 "];
+    [SQL appendString:@" , title "];
+    [SQL appendString:@" , image "];
+    [SQL appendString:@" FROM Books "];
+    [SQL appendString:@" ORDER BY addDate DESC "];
+    FMResultSet *rs = [self.myDB executeQuery:SQL];
+    while ([rs next]) {
+        NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+        [dict setValue:[rs stringForColumn:@"bookID"] forKey:@"bookID"];
+        [dict setValue:[rs stringForColumn:@"isbn10"] forKey:@"isbn10"];
+        [dict setValue:[rs stringForColumn:@"isbn13"] forKey:@"isbn13"];
+        [dict setValue:[rs stringForColumn:@"title"] forKey:@"title"];
+        [dict setValue:[rs stringForColumn:@"image"] forKey:@"image"];
+        [result addObject:dict];
+    }
+    return result;
+}
 
 @end

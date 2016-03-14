@@ -12,7 +12,7 @@
 
 @interface PAHomeViewController ()
     <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
-@property (nonatomic, retain) UICollectionView *collectionView;
+@property (nonatomic, strong) UICollectionView *collectionView;
 @end
 
 @implementation PAHomeViewController

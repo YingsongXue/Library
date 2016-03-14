@@ -48,12 +48,13 @@ typedef NS_ENUM(NSInteger, PABookStatus)
 //- (BOOL)isBook
 
 #pragma mark Add Info
-//- (BOOL)insertBooks:(NSString *)isbn keyType:(PABookKeyType)keyType;
+- (BOOL)insertBooks:(NSString *)isbn keyType:(PABookKeyType)keyType;
 
 //may be need key
 //- (BOOL)updateBooksInfo:(NSDictionary *)book;
 
 #pragma mark GetData
+- (NSArray *)getBookList;
 //- (NSDictionary *)getOurStaff;
 //
 //- (NSArray *)getLocations;
